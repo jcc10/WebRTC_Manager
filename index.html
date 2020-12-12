@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Chat using Deno</title>
+</head>
+
+<body>
+    <button id="connectButton" name="connectButton" class="buttonleft">
+        Connect
+    </button>
+    <input type="text" name="connect" id="connect" placeholder="connect" inputmode="latin" size=60 maxlength=120>
+    <button id="disconnectButton" name="disconnectButton" class="buttonright" disabled>
+        Disconnect
+    </button>
+    <div class="messagebox">
+        <label for="message">Enter a message:
+            <input type="text" name="message" id="message" placeholder="Message text" inputmode="latin" size=60
+                maxlength=120>
+        </label>
+        <button id="sendPeer" name="sendButton" class="buttonright" disabled>
+            Send Peer
+        </button>
+    </div>
+    <div class="messagebox" id="receivebox">
+        <p>Messages received:</p>
+    </div>
+    <!-- The script needs to be compiled, use my BCC project to do so. -->
+    <script src="/compiled/rtcConn.ts" type="module"></script>
+</body>
+
+</html>
